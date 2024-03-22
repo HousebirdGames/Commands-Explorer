@@ -3,14 +3,14 @@
   "displayName": "Commands Explorer",
   "description": "Enhance your VS Code workflow by exploring all commands in an organized and interactive tree view and quickly execute them.",
   "publisher": "HousebirdGames",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "engines": {
     "vscode": "^1.87.0"
   },
   "categories": [
     "Other"
   ],
-  "icon": "Commands-Explorer-Logo.png",
+  "icon": "Commands-Explorer-Logo-Round.png",
   "activationEvents": [
     "onView:commandsView",
     "onCommand:commandsExplorer.refresh"
@@ -20,6 +20,26 @@
     "type": "git",
     "url": "https://github.com/HousebirdGames/Commands-Explorer.git"
   },
+  "keywords": [
+    "commands",
+    "explorer",
+    "vscode",
+    "extension",
+    "workflow",
+    "interactive",
+    "tree view",
+    "quick execution",
+    "productivity",
+    "development tools",
+    "command palette",
+    "command list",
+    "command explorer",
+    "command tree",
+    "command tree view",
+    "overview",
+    "command overview",
+    "command search"
+  ],
   "contributes": {
     "viewsContainers": {
       "activitybar": [
