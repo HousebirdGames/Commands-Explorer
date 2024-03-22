@@ -1,0 +1,65 @@
+{
+  "name": "commands-explorer",
+  "displayName": "Commands Explorer",
+  "description": "Enhance your VS Code workflow by exploring all commands in an organized and interactive tree view and quickly execute them.",
+  "publisher": "HousebirdGames",
+  "version": "1.0.0",
+  "engines": {
+    "vscode": "^1.87.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "icon": "Commands-Explorer-Logo.png",
+  "activationEvents": [
+    "onView:commandsView",
+    "onCommand:commandsExplorer.refresh"
+  ],
+  "main": "./extension.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/HousebirdGames/Commands-Explorer.git"
+  },
+  "contributes": {
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "commandsExplorer",
+          "title": "Commands Explorer",
+          "icon": "Commands-Explorer-Icon.svg"
+        }
+      ]
+    },
+    "views": {
+      "commandsExplorer": [
+        {
+          "id": "commandsView",
+          "name": "Overview"
+        }
+      ]
+    },
+    "commands": [
+      {
+        "command": "commandsExplorer.refresh",
+        "title": "Refresh Commands"
+      }
+    ],
+    "activationEvents": [
+      "onView:commandsView"
+    ]
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "npm run lint",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.87.0",
+    "@types/mocha": "^10.0.6",
+    "@types/node": "18.x",
+    "eslint": "^8.56.0",
+    "typescript": "^5.3.3",
+    "@vscode/test-cli": "^0.0.6",
+    "@vscode/test-electron": "^2.3.9"
+  }
+}
