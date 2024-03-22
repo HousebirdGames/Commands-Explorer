@@ -3,7 +3,7 @@
   "displayName": "Commands Explorer",
   "description": "Enhance your VS Code workflow by exploring all commands in an organized and interactive tree view and quickly execute them.",
   "publisher": "HousebirdGames",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "engines": {
     "vscode": "^1.87.0"
   },
