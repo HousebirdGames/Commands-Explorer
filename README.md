@@ -2,6 +2,13 @@
 
 Discover and execute Visual Studio Code commands effortlessly with the Commands Explorer extension. This tool enhances your VS Code experience by organizing all available commands into a structured tree view within the sidebar, grouped by their respective categories or prefixes for intuitive access. Whether you're aiming to boost your productivity, learn new shortcuts, or uncover hidden features, Commands Explorer is your ideal companion.
 
+## What's New in Version 1.1.0
+
+- **Favorites**: Mark commands as favorites for quick access.
+- **Favorite Settings**: Introduced a new setting that allows favorite commands to be displayed in both their original groups and the favorites group. Additionally, a setting has been added to enable or disable synchronization of favorites across devices.
+- **Direct Access to Settings**: New command to directly open the Commands Explorer settings.
+- **Alphabetical Sorting**: Enhanced organization of commands and command groups with alphabetical sorting.
+
 ## Features
 
 - **Interactive Tree View**: Easily navigate commands in a structured tree view, enhancing discoverability and access.

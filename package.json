@@ -3,7 +3,7 @@
   "displayName": "Commands Explorer",
   "description": "Enhance your VS Code workflow by exploring all commands in an organized and interactive tree view and quickly execute them.",
   "publisher": "HousebirdGames",
-  "version": "1.0.4",
+  "version": "1.1.0",
   "engines": {
     "vscode": "^1.87.0"
   },
@@ -60,10 +60,59 @@
     },
     "commands": [
       {
+        "command": "commandsExplorer.addToFavorites",
+        "title": "Add to Favorites"
+      },
+      {
+        "command": "commandsExplorer.removeFromFavorites",
+        "title": "Remove from Favorites"
+      },
+      {
         "command": "commandsExplorer.refresh",
         "title": "Refresh Commands"
+      },
+      {
+        "command": "commandsExplorer.openExtensionDetails",
+        "title": "Open extension details"
+      },
+      {
+        "command": "commandsExplorer.openSettings",
+        "title": "Open Commands Explorer Settings"
       }
     ],
+    "menus": {
+      "view/item/context": [
+        {
+          "command": "commandsExplorer.addToFavorites",
+          "when": "view == commandsView && viewItem =~ /\\.regularCommand/"
+        },
+        {
+          "command": "commandsExplorer.removeFromFavorites",
+          "when": "view == commandsView && viewItem =~ /\\.favoriteCommand/"
+        }
+      ]
+    },
+    "configuration": {
+      "title": "Commands Explorer",
+      "properties": {
+        "commandsExplorer.showInOriginalGroup": {
+          "type": "boolean",
+          "default": true,
+          "description": "Show favorite commands in their original groups as well as in the Favorites group."
+        },
+        "commandsExplorer.syncFavorites": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enables synchronization of favorites across devices. Note that local and synced favorites are maintained separately. Changes to one will not affect the other. Synchronization is performed via the VS Code settings sync feature."
+        },
+        "commandsExplorer.favorites": {
+          "type": "array",
+          "default": [],
+          "description": "List of favorite commands (Used for synchronization across devices).",
+          "scope": "application"
+        }
+      }
+    },
     "activationEvents": [
       "onView:commandsView"
     ]
